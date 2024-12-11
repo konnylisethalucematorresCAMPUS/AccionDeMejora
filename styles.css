@@ -1,0 +1,566 @@
+/**----------------------------------------------HEADER----------------------------------------------**/   
+/* Importación de fuente  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Definición de variables de color y ancho máximo para uso global */
+:root {             
+    --primary-color: #12ac8e;       /* Color primario principal */
+    --primary-color-dark: #000000;  /* Variante oscura del color primario */
+    --primary-color-light: #ffffff; /* Variante clara del color primario */
+    --secondary-color: #fd8c2f;     /* Color secundario */
+    --text-light: #767268;          /* Color de texto claro */
+    --white: #ffffff;               /* Color blanco */
+    --text-dark: #312929;           /* Color de texto oscuro */
+    --max-width: 1200px;            /* Ancho máximo para contenedores */
+}
+
+/* Reseteo de estilos predeterminados */
+* {
+    padding: 0;                     /* Elimina relleno interno */
+    margin: 0;                      /* Elimina márgenes externos */
+    box-sizing: border-box;         /* Incluye padding y border en el ancho/alto total */
+}
+header{
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 680px;
+}
+
+/* Contenedor de sección con ancho máximo y centrado */
+.section__container {
+    max-width: var(--max-width);    /* Establece ancho máximo */
+    padding: 5rem 1rem;             /* Relleno vertical y horizontal */
+    margin: auto;                   /* Centra horizontalmente */
+}
+
+/* Estilos de encabezado de sección */
+.section__header {
+    margin-bottom: 0.5rem;          /* Margen inferior */
+    font-size: 2rem;                /* Tamaño de fuente */
+    font-weight: 600;               /* Grosor de fuente */
+    color: #000000;                 /* Color de texto */
+}
+
+/* Estilos generales para imágenes */
+img {           
+    width: 100%;                    /* Ancho completo del contenedor */
+    display: flex;                  /* Visualización flexible */
+}
+
+/* Estilos de botones generales */
+.btn {                      
+    padding: 0.75rem 2rem;          /* Relleno interno */
+    outline: none;                  /* Sin contorno */
+    border: none;                   /* Sin borde */
+    border-radius: 5px;             /* Bordes redondeados */
+    font-size: 15px;                /* Tamaño de fuente */
+    white-space: nowrap;            /* Evita salto de línea */
+    color: rgb(255, 255, 255);      /* Color de texto */
+    background-color: #ff9100;      /* Color de fondo */
+}
+
+/* Estilo de fuente para todo el cuerpo */
+body {
+    font-family: "Poppins", sans-serif;  /* Familia de fuente */
+}
+
+/* Estilo de enlaces */
+a {
+    text-decoration: none;          /* Sin subrayado */
+}
+/* Estilos de encabezado */
+header {      
+    /* Gradiente con imagen de fondo */ 
+    background-image: linear-gradient(to right, rgba(18, 172, 142, 0.8), rgba(18, 172, 142, 0.8)), url(img/header.jpg);   /* Color de fondo de respaldo */
+    background-position: center center;     /* Centrar imagen de fondo */
+    background-size: cover;                /* Cubrir todo el contenedor */
+    background-repeat: no-repeat;          /* No repetir imagen */
+}
+
+/* Contenedor de navegación */
+.contenedor__nav {
+    padding: 3rem 2rem;             /* Relleno interno */
+    display: flex;                  /* Diseño flexible */
+    align-items: center;            /* Alinear elementos verticalmente */
+    justify-content: space-between; /* Distribuir elementos */
+}
+
+/* Estilo del logo principal */
+.nav__logo {            
+    font-size: 1.5rem;              /* Tamaño de fuente */
+    color: rgb(255, 255, 255);      /* Color de texto */
+    font-weight: 900;               /* Grosor de fuente */
+}
+
+/* Estilo de la segunda parte del logo */
+.nav__logo span {       
+    color: #fd8c2fd7;               /* Color diferente para el span */
+}
+
+/* Estilo de la lista de navegación */
+.nav__links {           
+    list-style: none;               /* Sin viñetas */
+    display: flex;                  /* Diseño flexible */
+    gap: 3rem;                      /* Espacio entre elementos */
+}
+
+/* Efecto hover para los enlaces */
+.link a:hover {
+    color: #000000;                 /* Color al pasar el cursor */
+}
+
+/* Color de los enlaces de navegación */
+.link a {               
+    color: #ffffff;                 /* Color de texto por defecto */
+}
+
+/* Contenedor principal del header */
+.contenedor__header {
+    display: flex;                  /* Diseño flexible */
+    align-items: center;            /* Alinear elementos verticalmente */
+    gap: 5rem;                      /* Espacio entre columnas */
+}
+
+/* Estilo del título principal */
+.contenedor__header h1 {     
+    margin-bottom: 2rem;            /* Margen inferior */
+    max-width: 800px;               /* Ancho máximo */
+    color: rgb(255, 255, 255);      /* Color de texto */
+    font-size: 3.5rem;              /* Tamaño de fuente */
+    line-height: 4rem;              /* Altura de línea */
+}
+
+/* Estilo del párrafo de introducción */
+.contenedor__header p {      
+    margin-bottom: 2rem;            /* Margen inferior */
+    max-width: 600px;               /* Ancho máximo */
+    color: #ffffff;                 /* Color de texto */
+    font-size: 16px;                /* Tamaño de fuente */
+}   
+
+/* Contenedor del formulario en el encabezado */
+.header__formulario {                 
+    width: 100%;
+    max-width: 350px;               /* Ancho máximo */
+}
+
+/* Estilo del formulario */
+.header__formulario form {        
+    display: grid;                  /* Diseño de cuadrícula */
+    gap: 1rem;                      /* Espacio entre elementos */
+    background-color: #ffffff;      /* Color de fondo */
+    border-radius: 10px;            /* Bordes redondeados */
+    padding: 2rem;                  /* Relleno interno */
+}
+
+/* Estilo de los campos de entrada */
+.header__formulario input {           
+    padding: 1rem;                  /* Relleno interno */
+    outline: none;                  /* Sin contorno */
+    border: none;                   /* Sin borde */
+    font-size: 1rem;                /* Tamaño de fuente */
+    background-color: var(--primary-color-light); /* Color de fondo */
+    color: #000000;                 /* Color de texto */
+    border-radius: 5px;             /* Bordes redondeados */
+}
+
+/* Estilos del botón del formulario */
+.formulario__btn {
+    background-color: #12ac8e;      /* Color de fondo */
+    color: rgb(255, 255, 255);      /* Color de texto */
+}
+
+/* Estilo del encabezado del formulario */
+.header__formulario h4 {
+    color: var(--primary-color);    /* Color de texto */
+    font-size: 1.5rem;              /* Tamaño de fuente */
+    font-weight: 700;               /* Grosor de fuente */
+}
+
+/* Efecto hover del botón */
+.formulario__btn:hover {              
+    background-color: rgb(39, 75, 193); /* Color al pasar el cursor */
+}
+/**----------------------------------------------SERVICIOS----------------------------------------------**/
+/* Sección de Servicios Especiales */
+
+/* Contenedor del encabezado de servicios */
+.service__header {          
+    display: flex;                  /* Diseño flexible */
+    align-items: center;            /* Alinear elementos verticalmente */
+    justify-content: space-between; /* Distribuir elementos */
+    gap: 2rem;                      /* Espacio entre elementos */
+}
+
+/* Texto descriptivo de servicios */
+.service__header__content p {
+    color: rgb(0, 0, 0);            /* Color de texto */
+    max-width: 600px;               /* Ancho máximo */
+}
+
+/* Botón de "Pedir un Servicio" */
+.service__btn {             
+    padding: 0.75rem 1rem;          /* Relleno interno */
+    outline: none;                  /* Sin contorno */
+    font-size: 1rem;                /* Tamaño de fuente */
+    color: var(--primary-color);    /* Color de texto */
+    border: 1px solid var(--primary-color); /* Borde con color primario */
+    background-color: transparent;  /* Fondo transparente */
+    border-radius: 5px;             /* Bordes redondeados */
+    white-space: nowrap;            /* Evitar salto de línea */
+    cursor: pointer;                /* Cursor de puntero */
+    transition: 0.3s;               /* Transición suave */
+}
+
+/* Efecto hover del botón de servicio */
+.service__btn:hover {                              
+    color: #ffffff;                 /* Color de texto al pasar el cursor */
+    background-color: var(--primary-color); /* Color de fondo al pasar el cursor */
+}
+
+/* Contenedor de cuadrícula de servicios */
+.service__grid {
+    margin-top: 4rem;               /* Margen superior */
+    display: grid;                  /* Diseño de cuadrícula */
+    gap: 4rem;                      /* Espacio entre elementos */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+}
+
+/* Tarjetas de servicios */
+.service__card {
+    padding: 2rem;                  /* Relleno interno */
+    border-radius: 10px;            /* Bordes redondeados */
+    box-shadow: 5px 5px 20px rgb(27, 45, 75); /* Sombra */
+    text-align: center;             /* Texto centrado */
+}
+
+/* Iconos/Símbolos de las tarjetas de servicio */
+.service__card span {
+    padding: 10px 20px;             /* Relleno interno */
+    display: inline-block;          /* Mostrar como bloque en línea */
+    border-radius: 100%;            /* Bordes completamente redondeados */
+    margin-bottom: 2rem;            /* Margen inferior */
+    font-size: 2.5rem;              /* Tamaño de fuente */
+    color: rgb(205 4 255);        /* Color de texto */
+    background-color: rgb(184 4 255 / 20%); /* Color de fondo */
+}
+
+/* Título de las tarjetas de servicio */
+.service__card h4 {
+    font-weight: 600;               /* Grosor de fuente */
+    margin-bottom: 0.5rem;          /* Margen inferior */
+    color: var(--text-dark);        /* Color de texto */
+    font-size: 1.2rem;              /* Tamaño de fuente */
+}
+
+/* Texto descriptivo de las tarjetas */
+.service__card p {
+    color: var(--text-light);       /* Color de texto */
+    margin-bottom: 1rem;            /* Margen inferior */
+}
+
+/* Enlace de "Más Información" en tarjetas */
+.service__card a {    
+    color: rgba(154, 0, 243, 0.233);        /* Color de texto */
+}
+
+/* Efecto hover del enlace */
+.service__card a:hover {
+    color: #070000;                 /* Color de texto al pasar el cursor */
+}
+
+/* Efecto hover del ícono de la tarjeta */
+.service__card:hover span {
+    color: rgb(255, 255, 255);      /* Color de texto al pasar el cursor */
+    background-color: rgba(4, 252, 190); /* Color de fondo al pasar el cursor */
+}
+
+/**----------------------------------------------POR QUE ELEGIRNOS----------------------------------------------**/
+/* Sección "Sobre Nosotros" */
+.about__container {   
+    display: grid;                  /* Diseño de cuadrícula */
+    gap: 2rem;                      /* Espacio entre elementos */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    font-size: 16px;                /* Tamaño de fuente */
+    align-items: center;            /* Alinear elementos verticalmente */
+}
+
+/* Contenido de la sección "Sobre Nosotros" */
+.about__content p {
+    color: var(--text-light);       /* Color de texto */
+    margin-bottom: 1rem;            /* Margen inferior */
+}
+
+/* Imagen en la sección "Sobre Nosotros" */
+.about__image img {     
+    max-width: 400px;               /* Ancho máximo */
+    border-radius: 8px;             /* Bordes redondeados */
+    margin: auto;                   /* Centrar horizontalmente */
+}
+
+/* Sección "Por qué Elegirnos" */
+.why__container {       
+    align-items: center;            /* Alinear elementos verticalmente */
+    display: grid;                  /* Diseño de cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 2rem;                      /* Espacio entre elementos */
+}
+
+/* Imagen en la sección "Por qué Elegirnos" */
+.why__image img {       
+    border-radius: 10px;            /* Bordes redondeados */
+    margin: auto;                   /* Centrar horizontalmente */
+    max-width: 400px;               /* Ancho máximo */
+}
+
+/* Contenido de la sección "Por qué Elegirnos" */
+.why__content p {
+    color: rgba(0, 0, 0, 0.594);    /* Color de texto */
+}
+
+/* Cuadrícula de ventajas */
+.why__grid {
+    gap: 2rem;                      /* Espacio entre elementos */
+    margin-top: 4rem;               /* Margen superior */
+    grid-template-columns: 80px auto; /* Columnas de tamaño específico */
+    display: grid;                  /* Diseño de cuadrícula */
+}
+
+/* Íconos/Símbolos en la cuadrícula de ventajas */
+.why__grid span {           
+    display: inline-flex;           /* Mostrar como flex en línea */
+    justify-content: center;        /* Centrar contenido horizontalmente */
+    align-items: center;            /* Centrar contenido verticalmente */
+    color: #0ba171;                 /* Color de texto */
+    box-shadow: 5px 5px 20px rgba(0, 232, 155, 0.386); /* Sombra */
+    font-size: 2.4rem;              /* Tamaño de fuente */
+    border-radius: 6px;             /* Bordes redondeados */
+}
+
+/* Títulos en la cuadrícula de ventajas */
+.why__grid h4 {         
+    color: #000000;                 /* Color de texto */
+    font-size: 1.3rem;              /* Tamaño de fuente */
+    margin-bottom: 0.5rem;          /* Margen inferior */
+}
+
+/* Texto descriptivo en la cuadrícula de ventajas */
+.why__grid p {
+    color: rgba(0, 0, 0, 0.679);    /* Color de texto */
+}
+
+
+
+/**----------------------------------------------DOCTORES----------------------------------------------**/
+
+/* Sección de Encabezado de Doctores */
+.doctors__header {
+    display: flex;                  /* Diseño flexible */
+    gap: 2rem;                      /* Espacio entre elementos */
+    justify-content: space-between; /* Distribuir elementos */
+    align-items: center;            /* Alinear elementos verticalmente */
+}
+
+/* Contenido del encabezado de doctores */
+.doctors__header__content p {
+    max-width: 700px;               /* Ancho máximo */
+    color: rgba(12, 1, 1, 0.583);   /* Color de texto */
+}
+
+/* Navegación de doctores (flechas) */
+.doctors__nav {
+    gap: 1rem;                      /* Espacio entre elementos */
+    display: flex;                  /* Diseño flexible */
+    align-items: center;            /* Alinear elementos verticalmente */
+}
+
+/* Iconos de navegación de doctores */
+.doctors__nav span {
+    font-size: 26px;                /* Tamaño de fuente */
+    padding: 5px 15px;              /* Relleno interno */
+    color: #037b19;                 /* Color de texto */
+    background-color: rgba(0, 174, 255, 0.222); /* Color de fondo */
+}
+
+/* Cuadrícula de doctores */
+.doctors__grid {
+    display: grid;                  /* Diseño de cuadrícula */
+    margin-top: 4rem;               /* Margen superior */
+    gap: 2rem;                      /* Espacio entre elementos */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+}
+
+/* Tarjetas de doctores */
+.doctors__card {
+    text-align: center;             /* Texto centrado */
+    border-radius: 10px;            /* Bordes redondeados */
+    box-shadow: 5px 5px 20px rgba(255, 0, 0, 0.692); /* Sombra */
+    cursor: pointer;                /* Cursor de puntero */
+}
+
+/* Contenedor de imagen de doctor */
+.doctors__card__image {
+    position: relative;             /* Posicionamiento relativo */
+    overflow: hidden;               /* Ocultar contenido desbordado */
+}
+
+/* Redes sociales de doctores */
+.doctors__socials {
+    display: flex;                  /* Diseño flexible */
+    width: 100%;                    /* Ancho completo */
+    align-items: center;            /* Alinear elementos verticalmente */
+    justify-content: center;        /* Centrar contenido horizontalmente */
+    gap: 1rem;                      /* Espacio entre elementos */
+    position: absolute;             /* Posicionamiento absoluto */
+}
+
+/* Iconos de redes sociales */
+.doctors__socials span {
+    display: inline-block;          /* Mostrar como bloque en línea */
+    color: rgb(0, 0, 0);            /* Color de texto */
+    background-color: rgb(255, 255, 255); /* Color de fondo */
+    padding: 4px 12px;              /* Relleno interno */
+    font-size: 1.5rem;              /* Tamaño de fuente */
+}
+
+/* Efecto hover de redes sociales */
+.doctors__socials span:hover {
+    color: rgba(0, 255, 242, 0.589); /* Color de texto al pasar el cursor */
+}
+
+/* Mostrar redes sociales al pasar el cursor sobre la tarjeta */
+.doctors__card:hover .doctors__socials {
+    bottom: 1rem;                   /* Posición desde abajo */
+}
+
+/* Nombre del doctor */
+.doctors__card h4 {
+    font-weight: 600;               /* Grosor de fuente */
+    color: rgb(0, 0, 0);            /* Color de texto */
+    margin-top: 1rem;               /* Margen superior */
+    font-size: 1.2rem;              /* Tamaño de fuente */
+}
+
+/* Especialidad del doctor */
+.doctors__card p {
+    margin-bottom: 1rem;            /* Margen inferior */
+    color: rgba(0, 0, 0, 0.582);    /* Color de texto */
+}
+
+/**----------------------------------------------------FOOTER--------------------------------------------------**/
+
+
+
+/* 
+   Contenedor principal del pie de página 
+   Define el color de fondo de todo el footer
+*/
+.footer {
+    background-color: #ddecec;      /* Color de fondo suave en tonos de agua/mar */
+}
+
+/* 
+   Estructura de cuadrícula para organizar el contenido del footer 
+   - Usa grid para distribuir el contenido
+   - Primera columna de 400px, tres columnas adicionales de tamaño igual
+*/
+.footer__container {
+    display: grid;      /* Usa diseño de cuadrícula */
+    gap: 2rem;          /* Espacio entre elementos de la cuadrícula */
+    grid-template-columns: 400px repeat(3, 1fr);  /* Distribución de columnas */
+}
+
+/* 
+   Estilo para los títulos principales de las columnas del footer 
+   Por ejemplo, el título "HEALTH" 
+*/
+.footer__col h3 {
+    font-weight: 600;    /* Grosor de fuente semi-negrita */
+    font-size: 1.5rem;                /* Tamaño de letra grande */
+    margin-bottom: 1rem;              /* Espacio inferior */
+    color: var(--primary-color);      /* Color principal definido en variables */
+}
+
+/* 
+   Estilo para la palabra "CARE" en el título 
+   Usa un color secundario para diferenciar
+*/
+.footer__col h3 span {
+    color: var(--secondary-color);    /* Color secundario para "CARE" */
+}
+
+/* 
+   Estilo para subtítulos de las columnas del footer 
+   Como "About", "Services", "Contact"
+*/
+.footer__col h4 {
+    color: var(--primary-color);    /* Color principal */
+    font-size: 1.2rem;              /* Tamaño de letra */
+    margin-bottom: 1rem;            /* Espacio inferior */
+}
+
+/* 
+   Estilo para párrafos y elementos de texto en las columnas 
+*/
+.footer__col p {
+    margin-bottom: 1rem;      /* Espacio inferior */
+    color:rgb(0, 0, 0);       /* Color de texto negro */
+    transition: 0.3s;          /* Transición suave para efectos hover */
+    cursor: pointer;           /* Cursor de tipo pointer */
+}
+
+/* 
+   Efecto al pasar el cursor sobre los elementos de texto 
+*/
+.footer__col p:hover {
+    color: var(--primary-color);    /* Cambia a color principal al hacer hover */
+}
+
+/* 
+   Estilo para iconos dentro de las columnas del footer 
+*/
+.footer__col i {
+    color: var(--primary-color);    /* Color de los iconos */
+}
+
+/* 
+   Barra final del footer con información de copyright 
+*/
+.footer__bar {
+    background-color: var(--primary-color);   /* Color de fondo */
+}
+
+/* 
+   Contenedor de la barra final del footer 
+*/
+.footer__bar__content {
+    display: flex;      /* Uso de flexbox para distribución */
+    margin: auto;       /* Centrado horizontal */
+    padding: 0.5rem 1rem;  /* Relleno interno */
+    align-items: center;     /* Alineación vertical de elementos */
+    max-width: var(--max-width);  /* Ancho máximo */
+    justify-content: space-between;  /* Distribuye elementos */
+    gap: 2rem;      /* Espacio entre elementos */
+}
+
+/* 
+   Texto de copyright en la barra final 
+*/
+.footer__bar__content p {
+    color:rgb(255, 255, 255);   /* Color blanco */
+    font-size: 0.8rem;  /* Tamaño de letra pequeño */
+}
+
+/* 
+   Contenedor de redes sociales en el footer 
+*/
+.footer__socials {
+    display: flex;      /* Uso de flexbox */
+    align-items: center;    /* Alineación vertical */
+    font-size: 1rem;        /* Tamaño de letra */
+    color: var(--white);    /* Color de los íconos */
+    cursor: pointer;        /* Cursor de tipo pointer */
+    gap: 1rem;              /* Espacio entre íconos */
+}
